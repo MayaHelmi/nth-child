@@ -1,0 +1,108 @@
+.exercise {
+    padding: 28px 30px;
+}
+
+/* EX1: Zig-zag Boxes */
+#ex1 .row {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+#ex1 .box {
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid;
+}
+
+#ex1 .box:nth-child(odd) {
+    background: yellow;
+}
+
+#ex1 .box:nth-child(even) {
+    background: green; 
+    margin-top: 30px;
+}
+
+/* EX2: Hide even numbers from 1 to 10 ! */
+#ex2 .row {
+    display: flex;
+    gap: 6px;
+}
+
+#ex2 .box {
+    width: 90px;
+    height: 35px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    background: red;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1.5px solid black;
+}
+
+#ex2 .box:nth-child(even) {
+    display: none;
+}
+
+/* EX3: Alternating groups of three */
+#ex3 .grid {
+    display: grid;
+    grid-template-columns: repeat(9, 64px);
+    gap: 10px;
+}
+
+#ex3 .box {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    background: green;
+}
+
+#ex3 .box::after {
+    content: "*";
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    color: black;
+    font-size: 6px;
+    line-height: 15px;
+}
+
+#ex3 .box:nth-child(6n+4),
+#ex3 .box:nth-child(6n+5),
+#ex3 .box:nth-child(6n+6) {
+    background: blue;
+}
+
+#ex3 .box:nth-child(6n+4)::after,
+#ex3 .box:nth-child(6n+5)::after,
+#ex3 .box:nth-child(6n+6)::after {
+    content: "x";
+    font-size: 16px;
+}
+
+/* EX4: Select the element on each point */
+
+#ex4 .row {
+    display: flex;
+    gap: 10px;
+}
+
+#ex4 .box {
+    width: 60px;
+    height: 60px;
+    background: lightblue;
+    border: 2px solid black;
+}
+
+#ex4 .ex .box:nth-child(5),
+#ex4 .r1 .box:nth-child(n+6),
+#ex4 .r2 .box:nth-child(-n+5),
+#ex4 .r3 .box:nth-child(4n+1),
+#ex4 .r4 .box:nth-last-child(-n+5),
+#ex4 .r5 .box:nth-last-child(2) {
+    background: orange;
+}
