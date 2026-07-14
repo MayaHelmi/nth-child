@@ -34,3 +34,5 @@ A CSS practice task focused on using the `:nth-child()` selector to style specif
 - CSS Grid
 - Element positioning
 - Styling without JavaScript
+
+This is the Live URL:  https://mayahelmi.github.io/nth-child/
